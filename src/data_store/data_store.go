@@ -1,9 +1,9 @@
 package data_store
 
-func GormInit() {
+func InitGorm() {
 
 }
 
-func EntInit() {
+func InitEnt() {
 
 }
