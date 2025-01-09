@@ -1,5 +1,5 @@
 package cache
 
-func InitRedis() {
-
+func InitRedis() interface{} {
+	return nil
 }

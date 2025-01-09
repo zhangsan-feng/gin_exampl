@@ -1,9 +1,13 @@
 package data_store
 
-func InitGorm() {
+func InitGormStore() {
 
 }
 
-func InitEnt() {
+func InitEntStore() interface{} {
+	return nil
+}
+
+func InitGfStore() {
 
 }

@@ -1,5 +1,5 @@
 package file_store
 
-func InitMinio() {
-
+func InitMinio() interface{} {
+	return nil
 }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gin_exampl/src/config"
 	"gin_exampl/src/router"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -9,11 +10,11 @@ import (
 func main() {
 
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
-
+	config.InitConfig()
 	engine := gin.New()
 	router.BandHttpRouter(engine)
 
-	engine.Run("0.0.0.0:8000")
+	engine.Run(config.ServerConfig.Port)
 
 	/*
 
