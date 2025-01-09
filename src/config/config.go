@@ -2,23 +2,32 @@ package config
 
 import (
 	"gin_exampl/src/cache"
+	"gin_exampl/src/cron_job"
 	"gin_exampl/src/data_store"
 	"gin_exampl/src/file_store"
 )
 
-var GDb = data_store.InitEntStore()
-var GCache = cache.InitRedis()
-var GFileStore = file_store.InitMinio()
-
 type ServerConfigImpl struct {
-	Port string
+	Port           string
+	LoggerPath     string
+	DB             string
+	Redis          string
+	Minio          string
+	Mq             string
+	ConfigFilePath string
 }
 
 var ServerConfig *ServerConfigImpl
 
-func initLoggerConfig() {
+func initServerConfig() {
 	ServerConfig = &ServerConfigImpl{
-		Port: "0.0.0.0:9999",
+		Port:           "0.0.0.0:9999",
+		LoggerPath:     `./`,
+		DB:             "",
+		Redis:          "",
+		Minio:          "",
+		Mq:             "",
+		ConfigFilePath: "./config.yaml",
 	}
 }
 
@@ -26,7 +35,12 @@ func loadConfigFileYml() {
 
 }
 
+var GDb = data_store.InitEntStore()
+var GCache = cache.InitRedis()
+var GFileStore = file_store.InitMinio()
+
 func InitConfig() {
-	initLoggerConfig()
+	initServerConfig()
 	loadConfigFileYml()
+	cron_job.InitCron()
 }
