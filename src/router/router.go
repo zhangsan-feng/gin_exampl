@@ -1,7 +1,10 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"gin_exampl/src/middleware"
+	"github.com/gin-gonic/gin"
+)
 
 func BandHttpRouter(r *gin.Engine) {
-
+	middleware.BindMiddleware(r)
 }
