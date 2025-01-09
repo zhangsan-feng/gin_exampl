@@ -35,7 +35,7 @@ func loadConfigFileYml() {
 
 }
 
-var GDb = data_store.InitEntStore()
+var GDB = data_store.InitGormStore()
 var GCache = cache.InitRedis()
 var GFileStore = file_store.InitMinio()
 
