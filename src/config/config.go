@@ -7,11 +7,17 @@ import (
 	"gin_exampl/src/file_store"
 )
 
+type RedisConfig struct {
+}
+
+type DBConfig struct {
+}
+
 type ServerConfigImpl struct {
 	Port           string
 	LoggerPath     string
-	DB             string
-	Redis          string
+	DB             *DBConfig
+	Redis          *RedisConfig
 	Minio          string
 	Mq             string
 	ConfigFilePath string
@@ -23,8 +29,8 @@ func initServerConfig() {
 	ServerConfig = &ServerConfigImpl{
 		Port:           "0.0.0.0:9999",
 		LoggerPath:     `./`,
-		DB:             "",
-		Redis:          "",
+		DB:             nil,
+		Redis:          nil,
 		Minio:          "",
 		Mq:             "",
 		ConfigFilePath: "./config.yaml",
@@ -43,4 +49,5 @@ func InitConfig() {
 	initServerConfig()
 	loadConfigFileYml()
 	cron_job.InitCron()
+
 }
