@@ -6,5 +6,8 @@ import (
 )
 
 func BandHttpRouter(r *gin.Engine) {
+
 	middleware.BindMiddleware(r)
+	middleware.UserVerificationMiddleware(r)
+
 }
