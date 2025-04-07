@@ -1,8 +1,8 @@
 package main
 
 import (
-	"admin_backend/global"
-	"admin_backend/router"
+	"gin_exampl/global"
+	"gin_exampl/router"
 	"github.com/gin-gonic/gin"
 	"io"
 	"log"
@@ -66,7 +66,7 @@ func main() {
 
 	global.New()
 	gin.SetMode(gin.ReleaseMode)
-	
+
 	engine := gin.Default()
 	router.NewHttpRouter(engine)
 	address := "0.0.0.0:34332"

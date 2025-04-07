@@ -1,8 +1,8 @@
 package file_store
 
 import (
-	"admin_backend/global"
 	"context"
+	"gin_exampl/global"
 	"github.com/minio/minio-go/v7"
 	"log"
 	"time"

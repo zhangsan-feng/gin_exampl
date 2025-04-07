@@ -1,6 +1,6 @@
 package user_entity
 
-import "admin_backend/global"
+import "gin_exampl/global"
 
 type UserEntity struct {
 }

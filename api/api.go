@@ -1,5 +1,5 @@
 package api
 
-import "admin_backend/api/database"
+import "gin_exampl/api/database"
 
 var Database = &database.Database{}

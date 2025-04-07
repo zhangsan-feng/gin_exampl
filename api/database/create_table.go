@@ -1,9 +1,9 @@
 package database
 
 import (
-	"admin_backend/global"
 	"database/sql"
 	"fmt"
+	"gin_exampl/global"
 	"log"
 )
 

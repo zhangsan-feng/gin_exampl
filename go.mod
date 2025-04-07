@@ -1,4 +1,4 @@
-module admin_backend
+module gin_exampl
 
 go 1.24.1
 

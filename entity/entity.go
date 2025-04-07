@@ -1,8 +1,8 @@
 package entity
 
 import (
-	"admin_backend/entity/resources_entity"
-	"admin_backend/entity/user_entity"
+	"gin_exampl/entity/resources_entity"
+	"gin_exampl/entity/user_entity"
 )
 
 var User = &user_entity.UserEntity{}

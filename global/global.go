@@ -68,7 +68,7 @@ func newRedis() {
 
 }
 
-func initMinio() {
+func newMinio() {
 	MinioConn, MinioErr = minio.New(MinioAddress, &minio.Options{
 		Creds: credentials.NewStaticV4(MinioAccessKey, MinioSecretKey, ""),
 	})
@@ -100,5 +100,5 @@ func newLogger() {}
 func New() {
 	newPostgresql()
 	newRedis()
-	initMinio()
+	newMinio()
 }

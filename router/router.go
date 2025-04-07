@@ -1,7 +1,7 @@
 package router
 
 import (
-	"admin_backend/api"
+	"gin_exampl/api"
 	"github.com/gin-gonic/gin"
 	jsoniter "github.com/json-iterator/go"
 	"log"

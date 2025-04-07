@@ -1,8 +1,8 @@
 package database
 
 import (
-	"admin_backend/utils"
 	"database/sql"
+	"gin_exampl/utils"
 	"github.com/gin-gonic/gin"
 	"log"
 )

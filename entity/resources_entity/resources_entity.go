@@ -1,6 +1,6 @@
 package resources_entity
 
-import "admin_backend/global"
+import "gin_exampl/global"
 
 type ResourcesEntity struct {
 }
